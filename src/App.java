@@ -1,5 +1,3 @@
-import Figuras.*;
- 
 import Singletron.Fabrica;
 
 public class App {
@@ -19,12 +17,10 @@ public class App {
         System.out.println("Quadrados: " + fabrica.getQuadrados());
         System.out.println("");
     
-        Circulo.getInstance().setRaio(4);
-        TrianguloEquilatero.getInstance().setLado(3);
-        TrianguloIsoceles.getInstance().setBase(1);
-        TrianguloIsoceles.getInstance().setLado(3);
-        TrianguloRetangulo.getInstance().setAltura(3);
-        TrianguloRetangulo.getInstance().setBase(6);
+        fabrica.setCirculo(4);
+        fabrica.setTrianguloEquilatero(3);
+        fabrica.setTrianguloIsoceles(3, 1);
+        fabrica.setTrianguloRetangulo(3, 6);
         fabrica.getUmQuadrados(0).setLado(1);
         fabrica.setUmQuadrados(2);
         fabrica.setUmQuadrados(3);

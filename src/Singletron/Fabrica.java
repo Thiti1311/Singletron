@@ -26,19 +26,37 @@ public class Fabrica {
         return Circulo.getInstance();
     }
 
+    public void setCirculo(double raio) {
+        Circulo.getInstance().setRaio(raio);
+    }
+
+
     public TrianguloIsoceles getTrianguloIsoceles() {
 
         return TrianguloIsoceles.getInstance();
     }
 
+    public void setTrianguloIsoceles(double lado, double base) {
+        TrianguloIsoceles.getInstance().setLado(lado);
+        TrianguloIsoceles.getInstance().setBase(base);
+    }
+
     public TrianguloEquilatero getTrianguloEquilatero() {
-        
         return TrianguloEquilatero.getInstance();
+    }
+
+    public void setTrianguloEquilatero(double lado) {
+        TrianguloEquilatero.getInstance().setLado(lado);
     }
 
     public TrianguloRetangulo getTrianguloRetangulo() {
 
         return TrianguloRetangulo.getInstance();
+    }
+
+    public void setTrianguloRetangulo(double altura, double base) {
+        TrianguloRetangulo.getInstance().setAltura(altura);
+        TrianguloRetangulo.getInstance().setBase(base);
     }
 
     public ArrayList<Quadrado> getQuadrados() {
